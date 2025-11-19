@@ -1,9 +1,9 @@
-import axios from './axiosIntance';
+import axios from "../lib/axiosInstances";
 
 const todoApi = {
   getAll: async (status) => {
     const params = status ? { status } : {};
-    return await axios.get('/todos', { params });
+    return await axios.get("/todos", { params });
   },
 
   getById: async (id) => {
@@ -11,7 +11,7 @@ const todoApi = {
   },
 
   create: async (data) => {
-    return await axios.post('/todos', data);
+    return await axios.post("/todos", data);
   },
 
   update: async (id, data) => {
